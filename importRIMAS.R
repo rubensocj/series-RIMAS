@@ -2,15 +2,13 @@
 #' Pré-processamento de dados de níveis de água subterrânea da RIMAS
 #' 
 #' @description 
-#' Limpa e trata os dados de águas subterrâneas da Rede Integrada de
-#' Monitoramento de Águas Subterrâneas (RIMAS), obtidos do portal RIMAS Web 
-#' para análise de séries temporais.
+#' Limpa e trata os dados obtidos do portal da Rede Integrada de Monitoramento
+#' de Águas Subterrâneas (RIMAS), para análise de séries temporais.
 #' 
 #' @details 
 #' Importa um arquivo de texto separado por vírgula (extensão .csv) obtido
-#' do site da Rede Integrada de Monitoramento de Águas Subterrâneas (RIMAS)
-#' (http://rimasweb.cprm.gov.br/layout/) com a evolução do nivel d´água
-#' medido em poços de monitoramento.
+#' do site da RIMAS (http://rimasweb.cprm.gov.br/layout/) com a 
+#' evolução do nivel d´água medido em poços de monitoramento.
 #' 
 #' Os dados da RIMAS são disponibilizados com periodicidade diária.
 #' Para dias com mais de um registro, a função calcula a média dos valores.
