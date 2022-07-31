@@ -3,7 +3,7 @@
 #' 
 #' @description 
 #' Limpa e trata os dados obtidos do portal da Rede Integrada de Monitoramento
-#' de Águas Subterrâneas (RIMAS), para análise de séries temporais.
+#' de Águas Subterrâneas (RIMAS) para análise de séries temporais.
 #' 
 #' @details 
 #' Importa um arquivo de texto separado por vírgula (extensão .csv) obtido
@@ -12,14 +12,14 @@
 #' 
 #' Os dados da RIMAS são disponibilizados com periodicidade diária.
 #' Para dias com mais de um registro, a função calcula a média dos valores.
-#' Para dias sem registro, o função atribui um valor ausente (NA).
+#' Para dias sem registro, a função atribui um valor ausente (NA).
 #' 
 #' @param file string informando o caminho (local no computador) para
-#' o arquivo baixado do portal RIMAS
+#' o arquivo baixado do portal RIMAS.
 #'
-#' @return data.frame com duas colunas: uma para a data e outra para os níveis
+#' @return data.frame com duas colunas: uma para a data e outra para os níveis.
 #'
-#' @author Rubens Oliveira da Cunha Júnior
+#' @author Rubens Oliveira da Cunha Júnior.
 #' 
 #' @examples
 #' caminho <- './dados/P2300020827.csv
