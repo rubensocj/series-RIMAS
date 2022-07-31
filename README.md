@@ -30,3 +30,12 @@ No arquivo [main.R](main.R) há um exemplo de aplicação.
   type = {Mestrado em Desenvolvimento Regional Sustentável}
 }
 ```
+
+## Referências
+<a id="1"></a> 
+CUNHA JÚNIOR, R. O.; COSTA, C. T. F.; FIRMINO, P. R. A. 
+Preenchimento de falhas em séries temporais de níveis de águas subterrâneas usando métodos univariados. 
+*In*: XIV ENREHSE - Encontro de Recursos Hídricos em Sergipe, Aracaju-SE, 2022.
+**Trabalho Técnicos**.
+p. 1-6.
+Disponível em: https://anais.abrhidro.org.br/job.php?Job=13793.
