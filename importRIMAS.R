@@ -1,28 +1,28 @@
 #' @Title
-#' Pr�-processamento de dados de n�veis de �gua subterr�nea da RIMAS
+#' Pré-processamento de dados de níveis de água subterrânea da RIMAS
 #' 
 #' @description 
 #' Limpa e trata os dados obtidos do portal da Rede Integrada de Monitoramento
-#' de �guas Subterr�neas (RIMAS) para an�lise de s�ries temporais.
+#' de Águas Subterrâneas (RIMAS) para análise de séries temporais.
 #' 
 #' @details 
-#' Importa um arquivo de texto separado por v�rgula (extens�o .csv) obtido
+#' Importa um arquivo de texto separado por vírgula (extensão .csv) obtido
 #' do site da RIMAS (http://rimasweb.cprm.gov.br/layout/) com a 
-#' evolu��o do nivel d��gua medido em po�os de monitoramento.
+#' evolução do nivel d´água medido em poços de monitoramento.
 #' 
-#' Os dados da RIMAS s�o disponibilizados com periodicidade di�ria.
-#' Para dias com mais de um registro, a fun��o calcula a m�dia dos valores.
-#' Para dias sem registro, a fun��o atribui um valor ausente (NA).
+#' Os dados da RIMAS são disponibilizados com periodicidade diária.
+#' Para dias com mais de um registro, a função calcula a média dos valores.
+#' Para dias sem registro, a função atribui um valor ausente (NA).
 #' 
 #' @param file string informando o caminho (local no computador) para
 #' o arquivo baixado do portal RIMAS.
 #'
-#' @return data.frame com duas colunas: uma para a data e outra para os n�veis.
+#' @return data.frame com duas colunas: uma para a data e outra para os níveis.
 #'
-#' @author Rubens Oliveira da Cunha J�nior.
+#' @author Rubens Oliveira da Cunha Júnior (cunhajunior.rubens@gmail.com).
 #' 
 #' @examples
-#' caminho <- './dados/P2300020827.csv
+#' caminho <- './dados/P2300020827.csv'
 #' poco <- import_RIMAS(caminho)
 import_RIMAS <- function(file) {
   require("dplyr")
@@ -34,7 +34,7 @@ import_RIMAS <- function(file) {
   x <- x[-which(x=="")]
   
   # header (n) e data (x)
-  n <- "N"#úmero de sequencia do nível d'agua;Data da medição;Hora da medição;Nível da água;Vazão;Bombeando;"
+  n <- "N"#Ãºmero de sequencia do nÃ­vel d'agua;Data da mediÃ§Ã£o;Hora da mediÃ§Ã£o;NÃ­vel da Ã¡gua;VazÃ£o;Bombeando;"
   for (i in 1:length(x)) {
     if (base::substr(x[i],1,1)==n) {
       kn <- i
