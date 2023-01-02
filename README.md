@@ -1,6 +1,6 @@
 # series-RIMAS
 
-O **series-RIMAS** é um projeto que realiza o pré-processamento de dados da Rede Integrada de Monitoramento de Águas Subterrâneas (RIMAS) obtidos do portal [RIMAS *Web*](http://rimasweb.cprm.gov.br/layout/) para análise de séries temporais em linguagem `R`.
+Este repositório contém códigos para pré-processamento de dados da Rede Integrada de Monitoramento de Águas Subterrâneas (RIMAS) obtidos do portal [RIMAS *Web*](http://rimasweb.cprm.gov.br/layout/) para análise de séries temporais em linguagem `R`.
 
 A função [import_RIMAS.R](importRIMAS.R) importa, limpa e trata os dados da RIMAS para análise de séries temporais. O arquivo de texto separado por vírgula (extensão *.csv*), obtido do site da RIMAS (http://rimasweb.cprm.gov.br/layout/), com a evolução do nivel d´água em poços de monitoramento é importado, e a função retorna um `data.frame` com duas colunas: data e nível.
 
@@ -22,7 +22,7 @@ No arquivo [main.R](main.R) há um exemplo de aplicação.
 
 ```
 @MASTERSTHESIS{,
-  title = {}
+  title = {Previsão do nível de água subterrânea usando ensemble de modelos de séries temporais}
   author = {da Cunha Júnior, Rubens Oliveira},
   year = {2022},
   school = {Universidade Federal do Cariri},
@@ -33,6 +33,13 @@ No arquivo [main.R](main.R) há um exemplo de aplicação.
 
 ## Referências
 <a id="1"></a> 
+CUNHA JÚNIOR, R. O. 
+**Previsão do nível de água subterrânea usando ensemble de modelos de séries temporais**. 
+Dissertação (Mestrado em Desenvolvimento Regional Sustentável) -
+Universidade Federal do Cariri.
+Crato, 2022.
+
+<a id="2"></a> 
 CUNHA JÚNIOR, R. O.; COSTA, C. T. F.; FIRMINO, P. R. A. 
 Preenchimento de falhas em séries temporais de níveis de águas subterrâneas usando métodos univariados. 
 *In*: XIV ENREHSE - Encontro de Recursos Hídricos em Sergipe, Aracaju-SE, 2022.
