@@ -1,22 +1,35 @@
 # series-RIMAS
 
-Este repositório contém códigos para pré-processamento de dados da Rede Integrada de Monitoramento de Águas Subterrâneas (RIMAS) obtidos do portal [RIMAS *Web*](http://rimasweb.cprm.gov.br/layout/) para análise de séries temporais em linguagem `R`.
+Este repositório contém códigos para pré-processamento de dados da Rede Integrada de Monitoramento de Águas Subterrâneas (RIMAS) para análise de séries temporais em linguagem R.
 
-A função [import_RIMAS.R](importRIMAS.R) importa, limpa e trata os dados da RIMAS para análise de séries temporais. O arquivo de texto separado por vírgula (extensão *.csv*), obtido do site da RIMAS (http://rimasweb.cprm.gov.br/layout/), com a evolução do nivel d´água em poços de monitoramento é importado, e a função retorna um `data.frame` com duas colunas: data e nível.
+O objetivo é automatizar o tratamento dos dados da RIMAS em linguagem R, como alternativa ao tratamento dos dados de forma manual usando softwares de planilha.
+Este projeto foi desenvolvido durante o Mestrado em Desenvolvimento Regional Sustentável (PRODER) da Universidade Federal do Cariri (UFCA).
 
-Os dados da RIMAS são disponibilizados com periodicidade diária. Para dias com mais de um registro, a função calcula a média dos valores, e para dias sem registro, a função atribui um valor ausente (`NA`).
+As séries históricas da evolução dos níveis de água subterrânea em poços de monitoramento da RIMAS são armazenadas em arquivos de texto separado por vírgula (extensão *.csv*) que podem ser obtidos do endereço:
 
-A motivação para o projeto foi automatizar o tratamento dos dados da RIMAS. Trata-se de uma etapa que precede a análise, modelagem e previsão de séries temporais de níveis de água subterrânea. Uma vez que todas as etapas podem ser realizadas em linguagem `R`, a função é uma alternativa ao tratamento dos dados de forma manual usando *softwares* de planilha.
+- http://rimasweb.cprm.gov.br/layout/
 
-Este projeto foi desenvolvido no âmbito do Programa de Mestrado em Desenvolvimento Regional Sustentável (PRODER) da Universidade Federal do Cariri (UFCA).
+A função [import_RIMAS.R](import_RIMAS.R) importa, limpa e organiza os dados para análise de séries temporais a partir de um arquivo de extensão *.csv*.
+Os dados da RIMAS são disponibilizados com periodicidade diária.
+Para dias com mais de um registro, a função calcula a média dos valores, e para dias sem registro, a função atribui um valor ausente (`NA`).
+A função retorna:
+
+- Tabela com data e nível no formato 'data.frame'
 
 ## Instalação
 
-Faça download do código-fonte e utilize a função [import_RIMAS.R](importRIMAS.R).
+Faça download do código-fonte e utilize a função [import_RIMAS.R](import_RIMAS.R).
 
 ## Exemplo
 
-No arquivo [main.R](main.R) há um exemplo de aplicação.
+```
+caminho <- './dados/P2300020827.csv'
+poco <- import_RIMAS(caminho)
+```
+
+## Requisitos
+
+Escrito usando R 4.1.2 e dplyr 1.0.7.
 
 ## Citação
 
