@@ -11,7 +11,7 @@ As séries históricas da evolução dos níveis de água subterrânea em poços
 
 A função [import_RIMAS.R](import_RIMAS.R) importa, limpa e organiza os dados para análise de séries temporais a partir de um arquivo de extensão *.csv*.
 Os dados da RIMAS são disponibilizados com periodicidade diária.
-Para dias com mais de um registro, a função calcula a média dos valores, e para dias sem registro, a função atribui um valor ausente (`NA`).
+Para dias com mais de um registro, a função calcula a média dos valores, e para dias sem registro, a função atribui um valor ausente (NA).
 A função retorna:
 
 - Tabela com data e nível no formato 'data.frame'
